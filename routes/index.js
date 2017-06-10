@@ -7,7 +7,7 @@ var reclamoController = require('../controllers/reclamoController');
 /* GET home page. */
 
 router.get('/',reclamoController.principal);
-router.get('/registroReclamo'reclamoController.registroReclamo);
+router.get('/registroReclamo',reclamoController.registroReclamo);
 router.post('/guardarReclamo',reclamoController.guardarReclamo);
 
 /*router.get('/', function(req, res, next) {

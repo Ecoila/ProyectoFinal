@@ -11,9 +11,9 @@ exports.principal = function (req, res, next){
                                                                                  reclamos: reclamos
                                                                                 }
                                                                       );
-                                                        }
-                        )
-}
+                                                                          }
+                                                      )
+                                              }
 
 exports.registroReclamo = function(req, res) {
  		              res.render('registroReclamo', {reclamo: reclamo });
