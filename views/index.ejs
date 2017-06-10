@@ -1,18 +1,19 @@
-<h3>Bien benido a <%= title%></h3>
+<h3>Bienvenido a <%= title%></h3>
 lapaguina donde puede regritrar reclamos...
 
-     <table border="1">
-     
-     	<tr>
+     <table>
+          	<tr>
      		<td>Tipo Rclamo</td>
      		<td>Obserbacion</td>
      		<td>Fecha</td>
      	</tr>
+     <% var i; for(i=0;i<reclamos.length; i++) { %>
      	<tr>
+               <td><%= i %></td>
      		<td><%= reclamo.tipoReclamo %></td>
      		<td><%= reclamo.observacion %></td>
      		<td><%= reclamo.fecha %></td>
      	</tr>
+
+          <% } %>
      </table>
-  </body>
-</html>

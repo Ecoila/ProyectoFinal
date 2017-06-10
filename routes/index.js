@@ -1,17 +1,24 @@
 var express = require('express');
 var router = express.Router();
-var reclamo={tipoReclamo:'odeco',
-			observacion:'mal servicio',	
-			fecha:'12-05-2017'}
-var objeto={title:'Proyecto Final',
- 			visitante:'Eric',
-			subtitle:'Avances en computacion',
-			reclamo:reclamo };
+var reclamoController = require('../controllers/reclamoController');
+
+
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index',
-  			 objeto );
-});
 
+router.get('/',reclamoController.principal);
+router.get('/registroReclamo'reclamoController.registroReclamo);
+router.post('/guardarReclamo',reclamoController.guardarReclamo);
+
+/*router.get('/', function(req, res, next) {
+  res.render('index',{title:'Proyecto Final', 
+  					subtitle:'Avances en computacion',
+  					reclamo:reclamo });
+			}
+	);
+
+router.get('/registroReclamo', function(req, res, next) {
+  res.render('registroReclamo',{reclamo: reclamo });
+});
+*/
 module.exports = router;
